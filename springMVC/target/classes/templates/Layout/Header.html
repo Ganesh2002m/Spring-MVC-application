@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta  http-equiv="content-type" content="text/html" charset="UTF-8">
+    <link th:href="@{webjar/bootstrap/5.3.2/css/bootstrap.min.css}"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" th:href="@{static/css/style.css}" href="../../static/css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <div th:fragment="header">
+        <nav class="nav nav-pills nav-fill">
+            <a class="nav-link active" aria-current="page" href="#" th:href="@{/}">Home</a>
+            <a class="nav-link" th:href="@{/products}" >Products</a>
+            <a class="nav-link" th:href="@{/products/add}">Create Products</a>
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </nav>
+
+        <div class="highlighted">
+            <div class="align-content-center">
+                <div class="row-cols-1">
+                    <h2>Spring MVC CRUD Application !</h2>
+                </div>
+            </div>
+            <div class="align-content-center">
+                <img src="../../static/image/springimg.png" width="30%"
+                     th:src="@{/image/springimg.png}"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
